@@ -142,7 +142,7 @@ static int flick_func(void *noused)
 
 	return 0;
 }
-
+/*直接操作式*/
 static int flick_func_raw(void *noused)
 {
 	//gpio: what request dir set free
@@ -233,7 +233,7 @@ static void __exit led_backlight_exit(void)
 {
 	struct task_struct *ptsk = led_backlight_info.tsk;
 	printk("----------exit-----------\n");
-#if 0
+#if 1
 	if (!IS_ERR(ptsk)){  
 		int ret = kthread_stop(ptsk);  
 		printk(KERN_INFO "------thread function has stop %ds\n", ret);  
