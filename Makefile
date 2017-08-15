@@ -13,3 +13,4 @@ all:
 	make $(EXTRA_CFLAGS) -C $(KDIR) M=$(PWD) modules
 clean:
 	rm *.o *.ko *.mod.c *.symvers modules.order
+	git clean -fd
