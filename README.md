@@ -22,3 +22,17 @@ sunxi light, normal /standby/等指示操作。
 ||
 ||	gpio_set_value(ifx_dev->gpio.reset, 1);
 ----------------------------<通用举例>--------------------------------------------
+
+配置普通gpio
+status = "okay"
+gpio0 =  port:PL10<1><default><default><1>
+gpio1 =  port:PA15<1><default><default><0>
+
+配置中断，要把gpio设置为输入
+
+
+===========================================================================
+TODOLIST
+1.灯的红蓝闪烁实现
+2.接收红外以后闪烁实现
+
